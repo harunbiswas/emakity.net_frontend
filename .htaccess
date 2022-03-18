@@ -1,0 +1,4 @@
+    Options -MultiViews
+    RewriteEngine On
+    RewriteCond %{Store.jsx} !-f
+    RewriteRule ^ index.html [QSA,L]

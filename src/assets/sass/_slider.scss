@@ -1,0 +1,52 @@
+// baner slider
+.baner-slider {
+  width: 100%;
+  margin: 10rem 0 2rem 0;
+  color: $color-white;
+  text-align: center;
+
+  &-item {
+    max-width: 70rem;
+
+    &-title {
+      font-size: 4.8rem;
+      font-family: $ABeeZee;
+      font-style: italic;
+    }
+
+    &-text {
+      font-size: $s-18;
+      font-family: $Roboto;
+      line-height: 4rem;
+    }
+  }
+
+  .slick-next:before,
+  .slick-prev:before {
+    display: none;
+  }
+
+  button.slick-arrow.slick-next,
+  button.slick-arrow.slick-prev {
+    border: solid $color-white;
+    border-width: 0 2px 2px 0;
+    height: 28px;
+    width: 28px;
+  }
+  button.slick-arrow.slick-next {
+    transform: rotate(-50deg);
+    right: 0.5rem;
+  }
+  button.slick-arrow.slick-prev {
+    transform: rotate(140deg);
+    left: 0.5rem;
+  }
+}
+
+.slick-dots li.slick-active button:before {
+  color: $color-white;
+}
+
+.slick-dots li button:before {
+  color: $color-white;
+}

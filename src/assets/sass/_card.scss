@@ -1,0 +1,155 @@
+#card {
+  @media screen and (max-width: $md) {
+    overflow-x: scroll;
+  }
+  padding: 4rem 0;
+  font-family: $Roboto;
+  .card-header {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: flex-start;
+    min-height: 100px;
+    min-width: 1024px;
+
+    &-btn {
+      max-width: 200px;
+      height: auto;
+      padding: 1rem 2rem;
+      border-radius: 0.8rem;
+      color: $color-black;
+      border: 1px solid $color-gray;
+
+      &-wrapper {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        font-size: 18px;
+
+        button {
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  .card-body {
+    min-width: 1024px;
+    &-header {
+      padding: 0.5rem;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      align-items: center;
+      justify-content: start;
+      font-size: $s-16;
+      border: 1px solid $color-gray;
+      border-width: 1px 0;
+
+      &-right {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+
+  .manazment-right-header-wrapper {
+    text-align: right;
+    font-family: $Roboto;
+    font-size: 1.6rem;
+    a {
+      color: #28bbea;
+      padding: 4px 0;
+    }
+  }
+}
+
+// card item
+.card-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  font-family: $Roboto;
+  font-size: $s-18;
+  padding: 1rem;
+  border-bottom: 1px solid $color-gray;
+  position: relative;
+
+  &-img {
+    width: 12rem;
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &-details {
+    strong {
+      display: block;
+      padding: 0.5rem;
+    }
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &-gty {
+    width: 5rem;
+    height: 3rem;
+    background-color: $color-white;
+    border: 1px solid $color-gray;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 4px;
+
+    &-top,
+    &-bottom {
+      position: absolute;
+      right: 2px;
+      cursor: pointer;
+    }
+
+    &-top {
+      top: -3px;
+    }
+
+    &-bottom {
+      bottom: -3px;
+    }
+  }
+
+  &-price,
+  &-total-price {
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    span {
+      color: $color-red;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 36px;
+    font-weight: 900;
+    color: $color-red;
+    cursor: pointer;
+  }
+}
+
+.card-main-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}

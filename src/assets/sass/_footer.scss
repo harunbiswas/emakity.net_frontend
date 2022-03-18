@@ -1,0 +1,152 @@
+// top footer
+.top-footer {
+  padding: 10rem 0;
+  background-color: #438600;
+  color: $color-white;
+  font-family: $Roboto;
+
+  &-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media screen and (max-width: $xs) {
+      grid-template-columns: 100%;
+      text-align: center;
+    }
+  }
+  &-left {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 1rem;
+
+    @media screen and (max-width: $md) {
+      flex-direction: column;
+    }
+  }
+
+  &-brand {
+    height: 100%;
+    margin: 0 auto;
+
+    img {
+      width: 18.2rem;
+    }
+  }
+
+  &-description {
+    padding: 0 3rem;
+    &-text {
+      p {
+        font-size: $s-18;
+      }
+    }
+
+    &-item-wrapper {
+      list-style: none;
+      font-size: $s-18;
+    }
+
+    &-item {
+      margin: 1rem 0;
+
+      svg {
+        font-size: 2.4rem;
+        margin-right: 1rem;
+      }
+
+      &-link {
+      }
+    }
+  }
+  &-right {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    @media screen and (max-width: $md) {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+    @media screen and (max-width: $sm) {
+      grid-template-columns: 100%;
+    }
+
+    &-title {
+      font-size: 1.6rem !important;
+      text-transform: uppercase;
+    }
+
+    &-body {
+      list-style: none;
+
+      &-item {
+        padding: 0.7rem 0;
+      }
+    }
+
+    &-input-group {
+      text-align: center;
+      margin-top: 1rem;
+      input {
+        height: 5.2rem;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        font-size: $s-18;
+        font-family: $Roboto;
+        color: $color-gray;
+
+        &::placeholder {
+          color: $color-gray;
+        }
+      }
+
+      .footer-btn {
+        height: 4.5rem;
+        margin: 1rem auto;
+        padding: 0 3rem;
+        font-size: $s-18;
+      }
+    }
+  }
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+    transition: 0.2s;
+    font-size: 1.8rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+//bottom footer
+.bottom-footer {
+  padding: 3rem;
+
+  &-text {
+    font-size: $s-18;
+    font-family: $Roboto;
+    & > a {
+      color: $color-theme;
+      font-size: $s-18;
+      font-family: $Roboto;
+      text-decoration: none;
+      transition: 0.2s;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+#catagori {
+  padding-top: 3rem;
+  background-image: url("../images/catagiri/catagori-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: inherit;
+
+  .catagori-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .slick-next:before,
+  .slick-prev:before {
+    display: none;
+  }
+  button.slick-arrow.slick-next,
+  button.slick-arrow.slick-prev {
+    background-color: $color-white;
+    background-image: url("../images/util/arrow.png");
+    width: 44px;
+    height: 44px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center center;
+    z-index: 2;
+    top: 50%;
+  }
+
+  button.slick-arrow.slick-prev {
+    transform: rotate(180deg) translateY(50%);
+    box-shadow: 2px -3px 4px 0px rgb(0, 0, 0, 0.5);
+    -webkit-box-shadow: 2px -3px 4px 0px rgb(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px -3px 4px 0px rgb(0, 0, 0, 0.5);
+
+    @media screen and (max-width: $xs) {
+      left: 1rem;
+    }
+  }
+  button.slick-arrow.slick-next {
+    transform: translateY(-50%);
+    box-shadow: 2px 3px 4px 0px rgb(0, 0, 0, 0.5);
+    -webkit-box-shadow: 2px 3px 4px 0px rgb(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 3px 4px 0px rgb(0, 0, 0, 0.5);
+    @media screen and (max-width: $xs) {
+      right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.store-details {
+  width: 100%;
+  min-height: 19.6rem;
+  border: 1px solid $color-gray;
+
+  &-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    @media screen and (max-width: $md) {
+      grid-template-columns: 75% 25%;
+    }
+    @media screen and (max-width: $sm) {
+      grid-template-columns: 100%;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &-brand {
+    width: 23.5rem;
+    height: 19.6rem;
+
+    position: relative;
+    &-logo {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      left: 0;
+      bottom: 3.4rem;
+    }
+
+    &-store {
+      width: 17rem;
+      position: absolute;
+      left: 3rem;
+      bottom: 4rem;
+      height: 17rem;
+      border-radius: 50%;
+    }
+  }
+
+  &-item {
+    font-family: $Roboto;
+
+    &-wrapper {
+      display: flex;
+      gap: 1rem;
+    }
+
+    &-title {
+      font-size: 28px;
+      text-transform: capitalize;
+    }
+
+    span {
+      font-size: $s-16;
+      display: block;
+      padding: 1rem;
+    }
+  }
+
+  &-delevary {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    @media screen and (max-width: $sm) {
+      align-items: flex-start;
+    }
+
+    &-btn-wrapper {
+      display: flex;
+      font-size: 34px;
+      gap: 2rem;
+
+      button {
+        font-size: 1.6rem;
+        padding: 0.5rem 1.5rem;
+      }
+    }
+  }
+}
